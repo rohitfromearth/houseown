@@ -1,97 +1,102 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 🏠 Houseowner Mobile App
 
-# Getting Started
+Hey there! 👋 This is a simple mobile app that helps simulate a house handover experience. It’s made for homeowners who want to see their house layout, appliances, and also report issues — all from their phone. Cool, right? 😎
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🚀 Getting Started
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+This app is built with **React Native CLI** (not Expo). Here’s how to run it:
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### 1. Clone the Repo & Install Stuff
 
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+```bash
+git clone https://your-repo-url.git
+cd HouseownerApp
+npm install
 ```
 
-## Step 2: Build and run your app
+### 2. Set Up Android
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+- Make sure you’ve got Android Studio installed
+- Start an emulator or plug in your phone (enable USB debugging)
+- Then just run:
 
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```bash
+npx react-native run-android
 ```
 
-### iOS
+> If you're using iOS, you’ll need a Mac + Xcode + some extra steps.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## 🧠 How the App Is Structured
 
-```sh
-bundle install
+We kept things neat and modular, so it's easy to understand:
+
+```
+src/
+├── assets/         # Images & icons
+├── components/     # Buttons, headers, reusable UI parts
+├── navigation/     # All screen navigators (tabs + stacks)
+├── redux/          # State management using Redux Toolkit
+├── screens/        # Each screen lives in its own folder
+├── services/       # Placeholder APIs (for now, it’s mocked)
+└── utils/          # Any helpers or constants
 ```
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
-```
+## 🛠️ What's Inside
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+We used a few libraries to make this smooth:
 
-```sh
-# Using npm
-npm run ios
+| Library | What It Does |
+|--------|---------------|
+| `@react-navigation/native` | Handles screen switching and tabs |
+| `@reduxjs/toolkit` + `react-redux` | Keeps track of login state and more |
+| `@react-native-async-storage/async-storage` | Saves login session & reported issues |
+| `@react-native-community/checkbox` | Native checkbox UI |
+| `@react-native-picker/picker` | Dropdowns for categories etc. |
+| `react-native-maps` | Shows Google Map with your house pinned |
 
-# OR using Yarn
-yarn ios
-```
+---
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 📱 Screens You'll Find
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+| Screen | What It Shows |
+|--------|----------------|
+| SplashScreen | Just a loading screen checking login state |
+| LoginScreen | Email/password login with "Remember me" |
+| RegisterScreen | Sign up with mock OTP (just pretend 😄) |
+| DashboardScreen | Main page with welcome text and nav buttons |
+| HousePlanScreen | A static floor plan image |
+| AppliancesScreen | List of house appliances |
+| ReportIssueScreen | A form to report issues, saved locally |
+| ProfileScreen | User info + logout |
+| MapScreen | Shows a dummy location on Google Maps |
+| ForgotPasswordScreen | Just a placeholder for now |
 
-## Step 3: Modify your app
+---
 
-Now that you have successfully run the app, let's make changes!
+## 🧩 Neat Features
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+- ✅ Bottom tab bar navigation
+- ✅ Login and session saved across launches
+- ✅ Form to submit issues with urgency/contact method/etc.
+- ✅ Everything is locally stored for now (no real backend)
+- ✅ Static floor plan image
+- ✅ Simple, clean UI using React Native `StyleSheet`
+- ✅ Google Map with a pin 📍
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+---
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+## 🙌 Who Made This?
 
-## Congratulations! :tada:
+You did! 💪
 
-You've successfully run and modified your React Native App. :partying_face:
+Seriously — this is your custom-built mobile app with clean code and a real-world use case. It's structured to grow easily and stay readable.
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Let me know if you want to add screenshots or deploy this to the Play Store one day! 😄
