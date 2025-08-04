@@ -91,12 +91,6 @@ We used a few libraries to make this smooth:
 
 ---
 
-## 🙌 Who Made This?
 
-You did! 💪
-
-Seriously — this is your custom-built mobile app with clean code and a real-world use case. It's structured to grow easily and stay readable.
-
----
 
 Let me know if you want to add screenshots or deploy this to the Play Store one day! 😄
