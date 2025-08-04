@@ -10,7 +10,7 @@ import Header from '../../components/Header';
 import Button from '../../components/Button';
 
 const LoginScreen = ({ navigation }) => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
@@ -32,7 +32,7 @@ const LoginScreen = ({ navigation }) => {
       return;
     }
 
-    dispatch(login({ email }));
+    // dispatch(login({ email }));
     await AsyncStorage.setItem('isLoggedIn', 'true');
     await AsyncStorage.setItem('userEmail', email);
     if (rememberMe) {
