@@ -13,7 +13,7 @@ const SplashScreen = ({ navigation }) => {
       }
     };
 
-    setTimeout(checkLoginStatus, 1000); // small delay for UI polish
+    setTimeout(checkLoginStatus, 1000); 
   }, []);
 
   return (
